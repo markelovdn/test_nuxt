@@ -22,20 +22,30 @@ jobs:
           node-version: "16"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build project
         run: npm run generate
 
-      - name: Upload `dist` folder to GitHub Pages Artifact
+      - name: Verify dist directory exists
+        run: |
+          if [ ! -d "./dist" ]; then
+            echo "Error: dist directory not found"
+            exit 1
+          else
+            echo "dist directory exists"
+          fi
+
+      - name: Upload `./dist` folder to GitHub Pages Artifact
         uses: actions/upload-artifact@v2
         with:
           name: github-pages
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        if: ${{ success() }}
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
