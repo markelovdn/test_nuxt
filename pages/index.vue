@@ -7,6 +7,9 @@ const rightDrawerOpen = ref(false);
 const slide = ref("style");
 const lorem =
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque voluptatum obcaecati doloremque totam autem animi ipsam eveniet tempora aut.";
+const getText = () => {
+  return lorem;
+};
 
 const toggleRightDrawer = () => {
   rightDrawerOpen.value = !rightDrawerOpen.value;
@@ -79,11 +82,20 @@ const toggleRightDrawer = () => {
           <q-icon name="terrain" size="56px" />
           <div class="q-mt-md text-center">
             {{ lorem }}
+            <p>Хочу проверить как работает отображение текста через статику</p>
+            <p>Хочу проверить как работает отображение текста через статику</p>
+            <p>{{ getText() }}</p>
+            <p>{{ getText() }}</p>
+            <p>{{ getText() }}</p>
+            <p>{{ getText() }}</p>
           </div>
         </q-carousel-slide>
       </q-carousel>
     </div>
   </div>
+
+  <p>{{ getText() }}</p>
+  <p>{{ getText() }}</p>
 </template>
 
 <style lang="scss" scoped>
