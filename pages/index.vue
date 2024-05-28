@@ -80,7 +80,7 @@ const toggleRightDrawer = () => {
         <q-carousel-slide name="map" class="column no-wrap flex-center">
           <q-icon name="terrain" size="56px" />
           <div class="q-mt-md text-center">
-            {{ lorem }}
+            <q-img src="img/11.jpg" />
           </div>
         </q-carousel-slide>
       </q-carousel>
