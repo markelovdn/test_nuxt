@@ -1,5 +1,0 @@
-{
-  "yaml.schemas": {
-    "https://json.schemastore.org/github-action.json": "file:///var/www/test_nuxt/.github/workflows/deploy.yml"
-  }
-}
