@@ -1,0 +1,134 @@
+:root {
+  --q-background-secondary: #f3f3f3;
+  --background-card: #e3effb;
+  --q-blue-lighter: #0070f0;
+  --text-color: #424242;
+  --yellow: #f7b70b;
+  --red: #dd0000;
+  --green: #00dd00;
+  --black: #313131;
+  --white: #fff;
+  --mobile-max-width: 720px;
+  --mobile-min-width: 320px;
+  --border-radius: 12px;
+}
+a {
+  text-decoration: none;
+  color: var(--q-blue-lighter);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Tilda Sans" !important;
+  font-style: normal;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+.q-btn {
+  text-transform: inherit;
+  border-radius: 12px;
+  line-height: 1.15;
+  height: 48px;
+  font-size: 16px;
+}
+
+.q-field__control {
+  border-radius: 12px !important;
+  background-color: var(--white);
+  font-size: 16px;
+}
+
+.q-btn--form {
+  width: 165px;
+}
+
+.btn-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-link:hover {
+  text-decoration: underline !important;
+}
+
+.btn__label {
+  font-size: 16px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 120%;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+  margin: 0;
+}
+h5 {
+  color: var(--text-color);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0;
+}
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.gap-1 {
+  gap: 4px;
+}
+.gap-2 {
+  gap: 8px;
+}
+.gap-3 {
+  gap: 16px;
+}
+
+a {
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 0px;
+  width: 6px;
+  opacity: 0.5;
+}
+
+* {
+  scrollbar-color: darkgrey transparent !important;
+  scrollbar-width: thin !important;
+}
+
+.q-field--float .q-field__label {
+  transform: translateY(-60%) scale(0.75) !important;
+}
+.max-width {
+  width: 100%;
+}
